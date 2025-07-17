@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Follower Checker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-emerald-50 to-indigo-100 flex flex-col justify-between">
+    <main class="flex flex-1 items-center justify-center">
+        <div class="w-full max-w-md mx-auto bg-white/95 backdrop-blur-md rounded-3xl shadow-xl p-8 border border-gray-100">
+            <div class="flex flex-col items-center mb-6">
+                <span class="bg-gradient-to-r from-indigo-400 to-emerald-400 p-4 rounded-full shadow-lg mb-3">
+                    <i class="fab fa-instagram text-white text-4xl"></i>
+                </span>
+                <h1 class="text-3xl font-extrabold text-gray-800 mb-2 text-center tracking-tight">Instagram Follower Checker</h1>
+                <p class="text-gray-500 text-base text-center mb-2">Cek siapa yang tidak follback kamu dengan mudah</p>
+            </div>
+            <form action="/check" method="post" enctype="multipart/form-data" class="space-y-6">
+                <div>
+                    <label for="followers_file" class="block text-gray-700 font-semibold mb-1">
+                        <i class="fas fa-users mr-1 text-indigo-400"></i>Followers JSON
+                    </label>
+                    <input type="file" id="followers_file" name="followers_file" accept=".json" required
+                        class="block w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-300 focus:outline-none transition bg-gray-50 hover:bg-gray-100 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100">
+                </div>
+                <div>
+                    <label for="following_file" class="block text-gray-700 font-semibold mb-1">
+                        <i class="fas fa-user-friends mr-1 text-emerald-400"></i>Following JSON
+                    </label>
+                    <input type="file" id="following_file" name="following_file" accept=".json" required
+                        class="block w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-emerald-300 focus:outline-none transition bg-gray-50 hover:bg-gray-100 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-emerald-50 file:text-emerald-700 hover:file:bg-emerald-100">
+                </div>
+                <button type="submit"
+                    class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-400 to-emerald-400 hover:from-emerald-400 hover:to-indigo-400 text-white font-bold py-3 rounded-xl shadow-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-200">
+                    <i class="fas fa-search"></i>
+                    Cek Followers
+                </button>
+            </form>
+            <div class="mt-6 text-center text-xs text-gray-400">
+                <i class="fas fa-info-circle"></i> Data kamu tidak disimpan. Hanya diproses di browser.
+            </div>
+        </div>
+    </main>
+        <footer class="w-full py-6 px-2 text-center text-xs text-gray-500 bg-white/80 backdrop-blur-md border-t border-gray-100 mt-8">
+            <div class="max-w-xl mx-auto flex flex-col items-center gap-2">
+                <span class="inline-flex items-center gap-1 text-sm">
+                    <i class="fas fa-code text-indigo-400"></i>
+                    Dibuat dengan <span class="text-pink-400">❤</span> oleh <a href="https://github.com/NirxTech" target="_blank" class="underline hover:text-indigo-500">Muhammad Zahran</a>
+                </span>
+                <a href="https://saweria.co/NirxTech" target="_blank"
+                   class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-400 to-emerald-400 hover:from-emerald-400 hover:to-indigo-400 text-white font-bold py-3 rounded-xl shadow-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-200 mt-2">
+                    <i class="fas fa-coffee"></i>
+                    Beri dukungan pada developer tercinta
+                </a>
+                <div class="bg-gradient-to-r from-indigo-50 via-emerald-50 to-blue-50 rounded-lg px-4 py-3 mt-2 text-gray-600 text-xs shadow-inner border border-gray-100 max-w-md">
+                    <i class="fas fa-quote-left text-indigo-300 mr-2"></i>
+                    Web ini dibuat dengan kegabutan tingkat tinggi, khusus buat kalian para kaum yang suka unfollow nggak jelas karena pengen jadi seleb. Nah, di sini kalian bisa cek siapa aja yang nge-unffol. Dan yap, makasih udah mau pakai web ini!
+                    <i class="fas fa-quote-right text-indigo-300 ml-2"></i>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
